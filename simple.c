@@ -19,23 +19,23 @@ char ** split_spaces_cmd(const char * name,const char * params){
   int i = 1;
   char delims[] = " ";
   char * next = NULL;
-  char * i_am_starting_to_get_frustrated_with_the_elements_tangential_to_course_content = strdup(params);
-  char **it_is_just_going_to_concat_this_anyway = (char**)malloc(sizeof(char**)*(strlen(params) + 2));
-  it_is_just_going_to_concat_this_anyway[0] = strdup(name);
-  next = strtok(i_am_starting_to_get_frustrated_with_the_elements_tangential_to_course_content,delims);
+  char * working = strdup(params);
+  char **params_array = (char**)malloc(sizeof(char**)*(strlen(params) + 2));
+  params_array[0] = strdup(name);
+  next = strtok(working,delims);
   if(next == NULL){
-    it_is_just_going_to_concat_this_anyway[i] = strdup(params);
+    params_array[i] = strdup(params);
     i++;
   }
   else {
     while(next != NULL){
-      it_is_just_going_to_concat_this_anyway[i] = strdup(next);
+      params_array[i] = strdup(next);
       i++;
       next = strtok(NULL,delims);
     }
   }
-  it_is_just_going_to_concat_this_anyway[i] = (char *)0;
-  return it_is_just_going_to_concat_this_anyway;
+  params_array[i] = (char *)0;
+  return params_array;
 }
 
 char * sub_q(char * input){
