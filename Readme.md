@@ -3,13 +3,13 @@ The shell is called "shesells" because it is the shesells C shell and yeah.
 
 ## Compilation
 To compile just fasten your seatbelt and type:
-	  make
+    make
 By default the prompt indicator is disabled, this is so that it passes the test script that I didn't write to compile it with the prompt run:
     make withprompt
 
 ## Installation
 Installing the shesells shell on your computer is as simple as running:
-	  make install
+    make install
 
 you will probably afterwards want to adjust your passwd/shadow file to reflect your new favorite shell.
 If you do not have permission to do this installation globally the file will be placed in `~/bin`
