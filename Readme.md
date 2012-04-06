@@ -3,8 +3,10 @@ The shell is called "shesells" because it is the shesells C shell and yeah.
 
 ## Compilation
 To compile just fasten your seatbelt and type:
+
     make
 By default the prompt indicator is disabled, this is so that it passes the test script that I didn't write to compile it with the prompt run:
+
     make withprompt
 
 ## Installation
