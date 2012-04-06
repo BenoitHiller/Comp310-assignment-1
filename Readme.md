@@ -1,20 +1,20 @@
-Intro:
+## Intro
 The shell is called "shesells" because it is the shesells C shell and yeah.
 
-Compilation:
+## Compilation
 To compile just fasten your seatbelt and type:
 	make
 By default the prompt indicator is disabled, this is so that it passes the test script that I didn't write to compile it with the prompt run:
   make withprompt
 
-Installation:
+## Installation
 Installing the shesells shell on your computer is as simple as running:
 	make install
 
 you will probably afterwards want to adjust your passwd/shadow file to reflect your new favorite shell.
 If you do not have permission to do this installation globally the file will be placed in ~/bin
 
-
+## Issues
 1. I didn't code a prompt at all. It isn't required and it screws up your test file.
 2. Unlike in bash "cd something | echo something" works as "expected"...
 3. everything after a ${>,<} is assumed to be a part of the filename, this is only slightly quirkier than the way bash handles it.
